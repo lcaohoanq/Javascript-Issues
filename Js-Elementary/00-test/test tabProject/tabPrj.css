@@ -1,0 +1,17 @@
+.container {
+  border: 1px solid red;
+  width: 500px;
+}
+.tab-content-item {
+  display: none;
+}
+.tab-content-item img {
+  display: block;
+  width: 100%;
+}
+.navtab-btn.activated {
+  background-color: red;
+}
+.tab-content-item.activated {
+  display: block;
+}

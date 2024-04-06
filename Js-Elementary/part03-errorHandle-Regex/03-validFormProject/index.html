@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>validFormProject</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      body {
+        background-color: rgb(49, 49, 49);
+
+        color: white;
+      }
+    </style>
+  </head>
+  <div class="container">
+    <h1 class="text-center text-info">Valid Form</h1>
+
+    <!-- form -->
+    <!-- acction bỏ đi -->
+    <!-- thêm attribute novalidate để bootstrap không check -->
+    <form novalidate>
+      <!--! email -->
+      <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input
+          type="email"
+          name=""
+          id="email"
+          class="form-control"
+          placeholder="name@example.com"
+        />
+        <!-- for đi cặp với id -->
+        <!-- nhiệm vụ của nó là khi bấm vào email thì sẽ nhảy qua ô luôn -->
+      </div>
+
+      <!--! name -->
+      <div class="mb-3">
+        <label for="name" class="form-label">Name</label>
+        <!--controlNode-->>
+        <!-- đứng từ thằng cha appendChild xuống -->
+        <!-- cha tên là parrentNode -->
+        <input
+          type="text"
+          name=""
+          id="name"
+          class="form-control"
+          placeholder=""
+        />
+        <!-- <input
+          type="text"
+          name=""
+          id="name"
+          class="form-control is-invalid"
+          placeholder=""
+        />
+        <div class="invalid-feedback">That field not required</div> -->
+      </div>
+
+      <!--! gender -->
+      <div class="mb-3">
+        <label for="gender" class="form-label">Gender</label>
+        <select id="gender" class="form-select">
+          <option value="" selected>Choice</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+          <option value="3">Other</option>
+        </select>
+      </div>
+
+      <!--! country: cấu trúc lạ -->
+      <div class="mb-3">
+        <label for="country" class="form-check-label">Country</label>
+        <!-- vietnam -->
+        <!-- thêm vào form-check-country để định danh rõ ràng -->
+        <div class="form-check form-check-country">
+          <label for="vietnam" class="form-check-label">Việt Nam</label>
+          <input
+            type="radio"
+            value="vietnam"
+            class="form-check-input"
+            id="vietnam"
+            name="country"
+          />
+        </div>
+
+        <!--! other -->
+        <div class="form-check form-check-country">
+          <label for="other" class="form-check-label">Other</label>
+          <input
+            type="radio"
+            value="other"
+            class="form-check-input"
+            id="other"
+            name="country"
+          />
+        </div>
+
+        <!-- phải thêm một cái name chung để 2 thằng xài thì chỉ tick được một trong 2 thằng -->
+      </div>
+
+      <!--! passwork -->
+      <div class="mb-3">
+        <label for="passwork" class="form-label">Passwork</label>
+        <input type="password" class="form-control" id="password" />
+      </div>
+
+      <!--! confirmed password -->
+      <div class="mb-3">
+        <label for="confirmedPassword" class="form-label"
+          >Confirmed-passwork</label
+        >
+        <input type="password" class="form-control" id="confirmedPassword" />
+      </div>
+
+      <!--! agree -->
+      <div class="mb-3 form-check">
+        <label for="agree" class="form-check-label">I agreed with rules</label>
+        <input
+          type="checkbox"
+          name=""
+          class="form-check-input"
+          id="agree"
+          value="true"
+        />
+      </div>
+
+      <!--! submit -->
+      <button class="btn btn-primary w-100">Subimt</button>
+    </form>
+  </div>
+  <body>
+    <!--? bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- js -->
+    <script src="./index.js"></script>
+  </body>
+</html>

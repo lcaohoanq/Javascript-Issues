@@ -1,0 +1,22 @@
+.tab-content-item {
+  /* border: 1px solid red; */
+  width: 300px;
+
+  /* ẩn các hình đi */
+  display: none;
+}
+.tab-content-item img {
+  display: block;
+  width: 100%;
+  /* width ôm theo div tab-content */
+  height: auto;
+}
+/* điều khiển bằng js, khi có sự kiện thì sẽ thêm các thuộc tính này vào class */
+/* đây là class navtab-btn */
+.navtab-btn.actived {
+  background-color: aqua;
+  /* thêm actived vào tên class của button */
+}
+.tab-content-item.actived {
+  display: block;
+}
