@@ -590,3 +590,145 @@ console.log(x[3]); //M
 x[3] = "L";
 console.log(x); //Lê Mười Điệp
 ```
+
+# 09 - Array & Object method
+
+- Array là một object đặc biệt, có 2 khả năng (mutable, immutable)
+- mảng không nhất thiết phải cùng kiểu
+
+```js
+let arr1 = [1, 2, "a", { lname: "Huệ", age: 10 }, [3, 5]];
+//mảng có thể lưu rất nhiều thứ
+//số, kí tự, object, mảng khác...
+```
+
+- length
+
+```js
+console.log(arr1.length); //5
+```
+
+- isArray | instanceof Array
+
+```js
+console.log(arr1 instanceof Array); //true
+console.log(Array.isArray(arr1)); //true
+```
+
+- toString(): biến mảng thành chuỗi kèm dấu phẩy
+
+```js
+let workerList = ["Huệ", "Lan", "Trà"];
+console.log(workerList.toString()); //Huệ,Lan,Trà
+```
+
+- split(separator): băm theo separator, băm một chuỗi thành mảng
+
+![alt text](image.png)
+
+```js
+const str = "The quick brown fox jumps over the lazy dog.";
+
+const words = str.split(" ");
+console.log(words[3]);
+// Expected output: "fox"
+
+const chars = str.split("");
+console.log(chars[8]);
+// Expected output: "k"
+
+const strCopy = str.split();
+console.log(strCopy);
+// Expected output: Array ["The quick brown fox jumps over the lazy dog."]
+```
+
+- join(separator): nối mảng thành chuỗi
+
+7. **pop()**:
+
+   - Xóa item ở cuối mảng và trả về item bị xóa.
+
+8. **unshift(item)**:
+
+   - Nhét item vào đầu mảng và trả về độ dài mới của mảng.
+
+9. **shift()**:
+
+   - Xóa item ở đầu mảng và trả về item bị xóa.
+
+10. **delete array[index]**:
+
+    - Xóa phần tử ở vị trí index.
+
+11. **splice(index, sl cần xóa,...phần tử muốn thêm)**:
+
+    - Return mảng các item bị xóa.
+
+12. **slice(start, end)**:
+
+    - Return mảng con từ start đến end - 1.
+
+13. **concat()**:
+
+    - Ghép các mảng lại với nhau.
+
+14. **Spread operator (...)**:
+
+    - Ghép các mảng hoặc phân rã mảng.
+
+15. **forEach(callback func)**:
+
+    - Lặp mảng và thực thi một callback function cho từng phần tử.
+
+16. **map(cf)**:
+
+    - Biến đổi từng phần tử theo công thức và trả về mảng mới.
+
+17. **filter(cf)**:
+
+    - Lọc các phần tử theo điều kiện và trả về mảng mới.
+
+18. **find(cf)**:
+
+    - Tìm phần tử đầu tiên thỏa điều kiện.
+
+19. **findIndex(cf)**:
+
+    - Tìm index của phần tử đầu tiên thỏa điều kiện.
+
+20. **indexOf(value)**:
+
+    - Tìm vị trí của giá trị đầu tiên trong mảng.
+
+21. **every(cf)**:
+
+    - Kiểm tra nếu tất cả các phần tử trong mảng thỏa điều kiện.
+
+22. **some(cf)**:
+
+    - Kiểm tra nếu ít nhất một phần tử trong mảng thỏa điều kiện.
+
+23. **includes(val)**:
+
+    - Kiểm tra nếu giá trị có tồn tại trong mảng.
+
+24. **reverse()**:
+
+    - Đảo ngược thứ tự các phần tử trong mảng.
+
+25. **sort()**:
+
+    - Sắp xếp các phần tử trong mảng.
+
+26. **reduce(cf, initial)**:
+    - Biến đổi mảng thành một giá trị duy nhất.
+
+Phương thức Object:
+
+- **showInFor()**: Hiển thị thông tin của object.
+- **Object.assign()**: Gộp các object lại với nhau.
+- **Object.keys(obj)**: Mảng các key của object.
+- **Object.values(obj)**: Mảng các value của object.
+- **Object.entries(obj)**: Mảng các entry của object.
+
+# 10 - DOM
