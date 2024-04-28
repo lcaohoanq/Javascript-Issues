@@ -1,6 +1,6 @@
 const XLSX = require("xlsx");
 
-const filePath = "./Products Dreame.en.xlsx";
+const filePath = "./Products Dreame.vi.xlsx-1714318011958";
 
 const workbook = XLSX.readFile(filePath);
 const sheetName = workbook.SheetNames[0];
@@ -13,23 +13,23 @@ let data = XLSX.utils.sheet_to_json(sheet, {
 
 function isExistColumn(column) {
   //check if the column is exist in the first row
-  return data[0].hasOwnProperty(column);
+  //hasOwnProperty(key)
+  return Object.prototype.hasOwnProperty.call(data[0], column);
 }
 
 function printData(column) {
   if (isExistColumn(column)) {
     const firstColumn = data.map((row) => row[column]);
-
-    // data = XLSX.utils.sheet_to_json(sheet, { header: 1, blankrows: true });
-    // const secondColumn = data.map((row) => row[0]);
-
     console.log(firstColumn);
-    // console.log(secondColumn);
-
-    console.log(data);
+    console.log(data[0]);
+    console.log(data[0].id);
+    console.log(typeof data[0].id);
   } else {
     console.log("Column not found");
   }
+  console.log(typeof firstColumn);
 }
 
-printData("Manufacturer");
+// printData("Stock Quantity");
+
+console.log("data from excel file: ", data);
